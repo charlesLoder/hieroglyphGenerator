@@ -1,0 +1,149 @@
+@import '_settings'
+
+normalize-css()
+base()
+
+// General Classes
+*
+  box-sizing: border-box
+  margin: 0
+  padding: 0
+
+.ss-text
+  font-family: "Helvetica Neue", "HelveticaNeue", "Helvetica", "Arial", "sans-serif"
+  color: #000
+  font-size: 1em
+
+.blue-back
+  background-color: rgb(85, 122, 149)
+
+.vollkorn
+  font-family: 'Vollkorn', 'serif'
+
+.flex
+  display: flex
+
+.flex-col
+  flex-direction: column
+
+.flex-row
+  flex-direction: row
+
+.f-row-nowrap
+  flex-flow: row nowrap
+
+.align-center
+  align-items: center
+
+.text-center
+  text-align: center
+
+a
+  text-decoration: none
+  color: inherit
+
+body
+  align-content: center
+  min-height: 100vh
+
+// Header & Nav Items
+header
+  border-bottom: 1px solid #000
+
+.banner
+  width: 90%
+  padding-left: 1em
+  padding-right: 1em
+  font-style: italic
+  font-size: 1.25em
+  font-variant: small-caps
+  text-align: center
+  letter-spacing: 0.125em
+  color:  #f9e79f
+  line-height: 1
+
+// Main Body
+section
+  align-content: center
+  flex: 1
+  background-image: url('../img/background-texture.png')
+  background-color: #D8C3A5
+  border-bottom: 1px solid #000
+
+.wrapper
+  flex-flow: column nowrap
+  width: 90%
+  margin: auto
+
+.main
+  width: 90%
+  border-radius: 5px
+  margin-top: 1em
+  margin-bottom: 1em
+  background-color:  #f9e79f
+  box-shadow: 2px 2px 5px rgba(150, 150, 150, 20)
+
+.main label
+  margin-top: .5em
+  font-size: 1em
+
+.box-wrapper
+  width: 95%
+  padding-bottom: .5em
+  padding-top: .5em
+
+.boxes
+  margin-top: 1em
+  margin-bottom: 1em
+  padding: 5px
+  border: 1px solid #000
+  border-radius: 5px
+  width: 250px
+  height 95px
+  -moz-border-radius: 5px
+
+#output
+  font-family: "Aegyptus_R", "Aegyptus_B", "Gardiner", "NewGardiner", sans-serif
+  font-size: 1.25em
+
+.help
+  font-size: .85em
+
+.contact-info
+  padding: 1em
+  margin: 1em
+
+.help-title
+  margin-top: .5em
+
+.help-div
+  margin: 1em
+
+.help-div div
+  font-size: .9em
+  margin-top: .5em
+
+.help-div a
+  font-style: bold 
+
+// Footer
+footer
+  justify-content: space-around
+  font-size: .75em
+  letter-spacing: 0.125em
+  text-align: center
+  color:  #f9e79f
+
+.footer-container
+  margin: .5em
+  width: 81%
+  justify-content: space-between
+
+.footer-contact
+  align-items: flex-start
+
+.icon-container
+  justify-content: space-around
+
+.icon
+  margin: .5em

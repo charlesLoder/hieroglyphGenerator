@@ -1,0 +1,21 @@
+doctype html
+
+html
+  head
+    meta(charset='utf8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge, chrome=1')
+    meta(name='description', content='description of your site')
+    meta(name='author', content= "author of the site")
+    //- uncomment if your site is responsive!
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    title= 'Gardiner Egyptian'
+    link(href="https://fonts.googleapis.com/css?family=Vollkorn:400,400i" rel="stylesheet")
+    != css()
+
+  body.flex.flex-col
+    include includes/header.jade
+    include includes/section.jade
+    include includes/footer.jade
+
+    script(src="https://code.jquery.com/jquery-3.3.1.min.js")
+    != js()

@@ -1,0 +1,19 @@
+extends layout
+
+block content 
+  .box-wrapper.flex.flex-col.align-center
+    .input-area.flex.flex-col
+      label(for="input") Type in a Gardiner Sign (e.g. A001)
+      textarea(name="input", id="input", class="boxes ss-text", cols="30", rows="4", placeholder="A001")
+    
+    .buttons
+      button#toHieroglyph &#9660
+      button#toGardiner &#9650
+
+    .output-area
+      textarea(name="output", id="output", class="boxes ss-text", cols="30", rows="4", placeholder="\u{13000}")
+
+    .help.ss-text 
+      | If you are experiencing issues, check out the 
+      a(href='./troubleshoot.html') Troubleshooting
+      |  page.

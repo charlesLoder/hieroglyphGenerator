@@ -1,0 +1,28 @@
+extends layout
+
+block content
+    h2.help-title Help
+    .box-wrapper.flex.flex-col
+        .help-div
+            h2 I just see boxes.
+            div 
+                | This means that you don't have a font on your system that supports hieroglyph Unicode characters.
+                | To find a font, check out 
+                a(href='http://www.egpz.org/Page/Fonts') this site
+                |  and install it on your system.
+
+        .help-div
+            h2 Why can't I stack the hieroglyphs?
+            div
+                | As of Unicode v.11, there are no control characters for the hieroglyph block.
+                | In v.12 there will be supports and this app will be updated.
+                | Of course, you will need a font that supports these control characters. 
+
+        .help-div
+            h2 Why not just use 
+                a(href='https://jsesh.qenherkhopeshef.org/') JSESH?
+            div
+                a(href='https://jsesh.qenherkhopeshef.org/') JSESH 
+                |  is a great tool, but it does not produce Unicode characters.
+                | With Unicode, each glyph is semantically unique.
+                | This means that a text can be read by a computer and it will never confuse that character for another.

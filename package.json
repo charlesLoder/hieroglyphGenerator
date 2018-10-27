@@ -1,0 +1,24 @@
+{
+  "name": "hieroglyph-generator",
+  "description": "A web app to convert Gardiner sign codes to the equivalent hieroglyph in unicode",
+  "dependencies": {
+    "autoprefixer-stylus": "0.9.x",
+    "axis": "0.6.x",
+    "coffee-script": "1.x",
+    "css-pipeline": "0.3.x",
+    "jade": "1.x",
+    "js-pipeline": "0.2.x",
+    "jstransformer-marked": "1.x",
+    "marked": "0.3.x",
+    "rupture": "0.6.x",
+    "stylus": "0.54.x"
+  },
+  "devDependencies": {
+    "eslint": "^5.7.0",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-node": "^7.0.1",
+    "eslint-plugin-promise": "^4.0.1",
+    "eslint-plugin-standard": "^4.0.0"
+  }
+}
