@@ -1076,13 +1076,13 @@ function convertToHGlyphs(input) {
   if (input === '') {
     return "\u{13000}";
   } else {
-    for (var k in hieroglyphObj) {
-      let gs = new RegExp(k, 'gi');
-      if (gs.test(input)) {
-        input = input.replace(gs, hieroglyphObj[k]);
+    return input.map(e => {
+      if (e in hieroglyphObj) {
+        return input[e] = hieroglyphObj[e]
+      } else {
+        return e
       }
-    }
-    return input;
+    })
   }
 }
 

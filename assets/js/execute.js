@@ -1,6 +1,6 @@
 $('#toHieroglyph').click(() => {
-    let inputBox = $('#input').val();
-    let hieroglyphs = convertToHGlyphs(inputBox);
+    let inputBox = $('#input').val().split('/');
+    let hieroglyphs = convertToHGlyphs(inputBox).join('');
     $('#output').val(hieroglyphs);
 })
 
