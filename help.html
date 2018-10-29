@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <meta name="description" content="description of your site">
+    <meta name="author" content="author of the site">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Gardiner Egyptian</title>
+    <link href="https://fonts.googleapis.com/css?family=Vollkorn:400,400i" rel="stylesheet"><link rel='stylesheet' href='css/hamburger.css' />
+<link rel='stylesheet' href='css/master.css' />
+  </head>
+  <body class="flex flex-col">
+    <header class="blue-back flex flex-col align-center">
+      <nav role="navigation">
+        <div id="menu-toggle">
+          <input type="checkbox"><span></span><span></span><span></span>
+          <ul id="menu"><a href="index.html">
+              <li>Home</li></a><a href="help.html">   
+              <li>Help</li></a><a href="contact.html">
+              <li>Contact</li></a></ul>
+        </div>
+      </nav>
+      <div class="banner">
+        <h1 class="vollkorn">Hieroglyph Generator</h1>
+      </div>
+    </header>
+    <section class="flex flex-col align-center">
+      <div class="wrapper flex align-center">
+        <div class="main flex flex-col align-center">
+          <h2 class="help-title">Help</h2>
+          <div class="box-wrapper flex flex-col">
+            <div class="help-div">
+              <h2>I just see boxes.</h2>
+              <div>
+                 
+                This means that you don't have a font on your system that supports hieroglyph Unicode characters.
+                To find a font, check out <a href="http://www.egpz.org/Page/Fonts">this site</a> and install it on your system.
+              </div>
+            </div>
+            <div class="help-div">
+              <h2>Why can't I stack the hieroglyphs?</h2>
+              <div>
+                As of Unicode v.11, there are no control characters for the hieroglyph block.
+                In v.12 there will be supports and this app will be updated.
+                Of course, you will need a font that supports these control characters. 
+              </div>
+            </div>
+            <div class="help-div">
+              <h2>Why not just use <a href="https://jsesh.qenherkhopeshef.org/">JSESH?</a></h2>
+              <div><a href="https://jsesh.qenherkhopeshef.org/">JSESH </a> is a great tool, but it does not produce Unicode characters.
+                With Unicode, each glyph is semantically unique.
+                This means that a text can be read by a computer and it will never confuse that character for another.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="blue-back vollkorn flex f-row-nowrap align-center">
+      <div class="footer-container flex flex-row">
+        <div class="footer-contact flex flex-col">
+          <div>Charles Loder </div>
+          <div id="copyright"> </div>
+        </div><a href="contact.html">Contact</a>
+      </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script><script src='js/convert.js'></script>
+<script src='js/execute.js'></script>
+<script src='js/writeYear.js'></script>
+  </body>
+</html>
