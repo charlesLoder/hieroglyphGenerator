@@ -1074,28 +1074,62 @@ hieroglyphObj = {
 
 function convertToHGlyphs(input) {
   if (input === '') {
-    return "\u{13000}";
+    return "\u{13000}\u{13001}";
   } else {
-    return input.map(e => {
+    return input.split('/').map(e => {
       if (e in hieroglyphObj) {
         return input[e] = hieroglyphObj[e]
       } else {
         return e
       }
-    })
+    }).join('')
   }
+}
+
+function getKeyByValue(object, value) {
+  return Object.keys(object).find(key => object[key] === value);
+}
+
+function testDelimiter(input, delimiter){
+  let reg = new RegExp (delimiter, 'gi');
+  return reg.test(input);
+}
+
+function mapGardiner(input, delimiter) {
+  return input.split(delimiter).map(e => {
+    let key = getKeyByValue(hieroglyphObj, e);
+    return (key ? e = key: e)
+  }).join(delimiter)
+}
+
+function noDelimiter(input) {
+  let inputArray = input.split('');
+  let newArray = [];
+  for (let i = 0; i < inputArray.length; i++) {
+    const current = inputArray[i];
+    const next = inputArray[i+1]
+    if(current >= '\uD800' && current <= '\uDBFF' && next >= '\uDC00' && next <= '\uDFFF') {
+      let combined = current + next;
+      newArray.push(combined);
+      i++;
+    } else {
+      newArray.push(current);
+    }
+  }
+  return newArray.map(e => {
+    let key = getKeyByValue(hieroglyphObj, e);
+    return (key ? e = key: e)
+  }).join(' ');
 }
 
 function convertToGardiner(input) {
   if (input === '') {
-    return "A001";
+    return "A001/A002";
+  } else if(testDelimiter(input, '/')) {
+    return mapGardiner(input, '/');
+  } else if(testDelimiter(input, ',')){
+    return mapGardiner(input, ',');
   } else {
-    for (var k in hieroglyphObj) {
-      let hg = new RegExp(hieroglyphObj[k], 'gi');
-      if (hg.test(input)) {
-        input = input.replace(hg, k);
-      }
-    }
-    return input;
+    return noDelimiter(input);
   }
 }
