@@ -6,7 +6,7 @@
     <meta name="description" content="description of your site">
     <meta name="author" content="author of the site">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Gardiner Egyptian</title>
+    <title>Hieroglyph Generator</title>
     <link href="https://fonts.googleapis.com/css?family=Vollkorn:400,400i" rel="stylesheet"><link rel='stylesheet' href='css/hamburger.css' />
 <link rel='stylesheet' href='css/master.css' />
   </head>
@@ -28,18 +28,21 @@
     <section class="flex flex-col align-center">
       <div class="wrapper flex align-center">
         <div class="main flex flex-col align-center">
-          <div class="box-wrapper flex flex-col align-center">
-            <div id="instr" class="instruction">You must put a '/' before every sign.</div>
-            <div class="input-area flex flex-col">
-              <label for="input">Type in a Gardiner Sign (e.g. /A001)</label>
-              <textarea name="input" id="input" cols="30" rows="4" placeholder="/A001" class="boxes ss-text"></textarea>
-            </div>
-            <div class="buttons">
-              <button id="toHieroglyph">&#9660</button>
-              <button id="toGardiner">&#9650</button>
-            </div>
-            <div class="output-area">
-              <textarea name="output" id="output" cols="30" rows="4" placeholder="𓀀" class="boxes ss-text"></textarea>
+          <div class="box-wrapper flex flex-col just-start">
+            <div id="instr" class="instruction">You must put a '/' or ',' between every Gardiner sign.</div>
+            <div class="box-box flex flex-col align-center">
+              <div class="input-area flex flex-col just-start">
+                <label for="input">Type in a Gardiner Sign (e.g. A001/A002)</label>
+                <textarea name="input" id="input" cols="30" rows="4" placeholder="A001/A002" class="boxes ss-text"></textarea>
+              </div>
+              <div class="buttons">
+                <button id="toHieroglyph">&#9660</button>
+                <button id="toGardiner">&#9650</button>
+              </div>
+              <div class="output-area flex flex-col just-start">
+                <label for="output">You can enter hieroglyphs and get the Gardiner signs.</label>
+                <textarea name="output" id="output" cols="30" rows="4" placeholder="𓀀/𓀁" class="boxes ss-text"></textarea>
+              </div>
             </div>
             <div id="main-help" class="instruction">If you are experiencing issues, check out the <a href="./troubleshoot.html">Troubleshooting</a> page.</div>
           </div>

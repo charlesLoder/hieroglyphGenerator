@@ -223,6 +223,14 @@ body {
       -ms-grid-row-align: center;
       align-items: center;
 }
+.just-start {
+  -ms-flex-pack: start;
+      justify-content: flex-start;
+}
+.just-cent {
+  -ms-flex-pack: center;
+      justify-content: center;
+}
 .text-center {
   text-align: center;
 }
@@ -296,9 +304,19 @@ section {
   margin-top: 1em;
   margin-bottom: 1em;
 }
+.output-area {
+  width: 100%;
+}
+.input-area {
+  min-width: 100%;
+}
+#input {
+  width: 100%;
+}
 #output {
   font-family: "Aegyptus_R", "Aegyptus_B", "Gardiner", "NewGardiner", sans-serif;
   font-size: 1.25em;
+  width: 100%;
 }
 #main-help {
   font-size: 0.85em;
@@ -345,6 +363,26 @@ footer {
 }
 .icon {
   margin: 0.5em;
+}
+@media screen and (min-width: 600px) {
+  .box-wrapper {
+    width: 75%;
+  }
+}
+@media screen and (min-width: 900px) {
+  .box-wrapper {
+    width: 50%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .box-wrapper {
+    width: 40%;
+  }
+}
+@media screen and (min-width: 1800px) {
+  .box-wrapper {
+    width: 30%;
+  }
 }
 
  /*# sourceMappingURL=master.css.map */
