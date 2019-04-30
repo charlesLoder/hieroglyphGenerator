@@ -1,4 +1,4 @@
-hieroglyphObj = {
+const hieroglyphObj = {
   "A001": "\u{13000}",
   "A002": "\u{13001}",
   "A003": "\u{13002}",
@@ -1072,18 +1072,12 @@ hieroglyphObj = {
   "Z016H": "\u{1340C}"
 }
 
+function findGlyph(char, obj) {
+  return char in obj ? obj[char]: char;
+}
+
 function convertToHGlyphs(input) {
-  if (input === '') {
-    return "\u{13000}\u{13001}";
-  } else {
-    return input.split('/').map(e => {
-      if (e in hieroglyphObj) {
-        return input[e] = hieroglyphObj[e]
-      } else {
-        return e
-      }
-    }).join('')
-  }
+  return !input ? "\u{13000}\u{13001}": input.split('/').map(char => findGlyph(char, hieroglyphObj)).reduce((a, c) => a+c);
 }
 
 function getKeyByValue(object, value) {
