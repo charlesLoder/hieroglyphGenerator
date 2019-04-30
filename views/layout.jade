@@ -8,7 +8,7 @@ html
     meta(name='author', content= "author of the site")
     //- uncomment if your site is responsive!
     meta(name="viewport" content="width=device-width, initial-scale=1")
-    title= 'Hieroglyph Generator'
+    title='Hieroglyph Generator'
     link(href="https://fonts.googleapis.com/css?family=Vollkorn:400,400i" rel="stylesheet")
     != css()
     include includes/analytics.jade
@@ -18,5 +18,4 @@ html
     include includes/section.jade
     include includes/footer.jade
 
-    script(src="https://code.jquery.com/jquery-3.3.1.min.js")
-    != js()
+  script(defer="true", src="js/writeYear.js")

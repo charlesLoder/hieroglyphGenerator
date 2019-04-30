@@ -2,7 +2,7 @@ extends layout
 
 block content 
   .box-wrapper.flex.flex-col.just-start
-    #instr.instruction You must put a '/' or ',' between every Gardiner sign.
+    #instr.instruction You must put a '/' between every Gardiner code or hieroglyph.
     
     .box-box.flex.flex-col.align-center
       .input-area.flex.flex-col.just-start
@@ -21,3 +21,6 @@ block content
       | If you are experiencing issues, check out the 
       a(href='./help.html') Help
       |  page.
+
+  script(defer="true", src="js/index.js")    
+  script(defer="true", src="js/convert.js")
